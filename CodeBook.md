@@ -1,22 +1,18 @@
----
-title: "Code Book for HAR-Smartphone-tidy.txt"
-author: "Lora Armstrong"
-date: "21 June 2015"
-output: html_document
----
+Code Book for HAR-Smartphone-tidy.txt
+=====================================
 
-Description of tidy dataset HAR-Smartphone-tidy.txt, compiled from the Human Activity Recognition Using Smartphones Dataset.   
+This is a description of tidy dataset HAR-Smartphone-tidy.txt, which came from the Human Activity Recognition Using Smartphones Dataset and was modified as specified below.   
 
 Tidy dataset dimensions: 180 rows x 68 columns
 
-Tidy dataset variable descriptions:  
-
-* **subject (column 1)**  
+###Tidy dataset variable descriptions  
+**subject (column 1)**  
         Description: ID number of each subject for whom smartphone data was recorded  
         Format: integer from 1 to 30  
 
-* **activity (column 2)**  
-        Description: name of activity that subject was engaged in while recording smartphone data:  
+**activity (column 2)**  
+        Description: name of activity that subject was engaged in while recording smartphone
+        data  
         Format: one of the following 6 activity names  
         
         LAYING  
@@ -24,11 +20,20 @@ Tidy dataset variable descriptions:
         STANDING  
         WALKING  
         WALKING_DOWNSTAIRS  
-        WALKING_UPSTAIRS  
-
-* **averages of smartphone measurements recorded for each subject and activity (columns 3-68) **  
+        WALKING_UPSTAIRS 
         
-        column 3: tBodyAcc-mean()-X-avg   
+**Averages of smartphone measurements recorded for each subject and activity 
+(columns 3-68)**  
+Description:   
+        * Each column gives the average of either the
+                mean of a variable or the standard deviation (std) of a variable that was recorded for each subject and activity.  
+        * The first character of the variable name indicates whether that
+                variable is in the time(t) or frequency (f) domain.  
+        * The letters X, Y, and Z in the variable names indicated whether 
+                the measured value is in the X, Y, or Z direction.  
+        Format: 
+        
+        column 3: tBodyAcc-mean()-X-avg:   
         column 4: tBodyAcc-mean()-Y-avg   
         column 5: tBodyAcc-mean()-Z-avg   
         column 6: tBodyAcc-std()-X-avg  
@@ -66,13 +71,58 @@ Tidy dataset variable descriptions:
         column 38: tBodyAccJerkMag-std()-avg  
         column 39: tBodyGyroMag-mean()-avg  
         column 40: tBodyGyroMag-std()-avg  
-        column 41: tBodyGyroJerkMag-mean()-avg (dbl), tBodyGyroJerkMag-std()-avg (dbl), fBodyAcc-mean()-X-avg (dbl),
-  fBodyAcc-mean()-Y-avg (dbl), fBodyAcc-mean()-Z-avg (dbl), fBodyAcc-std()-X-avg (dbl), fBodyAcc-std()-Y-avg (dbl),
-  fBodyAcc-std()-Z-avg (dbl), fBodyAccJerk-mean()-X-avg (dbl), fBodyAccJerk-mean()-Y-avg (dbl), fBodyAccJerk-mean()-Z-avg
-  (dbl), fBodyAccJerk-std()-X-avg (dbl), fBodyAccJerk-std()-Y-avg (dbl), fBodyAccJerk-std()-Z-avg (dbl), fBodyGyro-mean()-X-avg
-  (dbl), fBodyGyro-mean()-Y-avg (dbl), fBodyGyro-mean()-Z-avg (dbl), fBodyGyro-std()-X-avg (dbl), fBodyGyro-std()-Y-avg (dbl),
-  fBodyGyro-std()-Z-avg (dbl), fBodyAccMag-mean()-avg (dbl), fBodyAccMag-std()-avg (dbl), fBodyBodyAccJerkMag-mean()-avg (dbl),
-  fBodyBodyAccJerkMag-std()-avg (dbl), fBodyBodyGyroMag-mean()-avg (dbl), fBodyBodyGyroMag-std()-avg (dbl),
-  fBodyBodyGyroJerkMag-mean()-avg (dbl), fBodyBodyGyroJerkMag-std()-avg (dbl)
-        
+        column 41: tBodyGyroJerkMag-mean()-avg
+        column 42: tBodyGyroJerkMag-std()-avg
+        column 43: fBodyAcc-mean()-X-avg
+        column 44: fBodyAcc-mean()-Y-avg 
+        column 45: fBodyAcc-mean()-Z-avg
+        column 46: fBodyAcc-std()-X-avg
+        column 47: fBodyAcc-std()-Y-avg
+        column 48: fBodyAcc-std()-Z-avg
+        column 49: fBodyAccJerk-mean()-X-avg
+        column 50: fBodyAccJerk-mean()-Y-avg
+        column 51: fBodyAccJerk-mean()-Z-avg
+        column 52: fBodyAccJerk-std()-X-avg
+        column 53: fBodyAccJerk-std()-Y-avg
+        column 54: fBodyAccJerk-std()-Z-avg
+        column 55: fBodyGyro-mean()-X-avg
+        column 56: fBodyGyro-mean()-Y-avg
+        column 57: fBodyGyro-mean()-Z-avg
+        column 58: fBodyGyro-std()-X-avg
+        column 59: fBodyGyro-std()-Y-avg
+        column 60: fBodyGyro-std()-Z-avg
+        column 61: fBodyAccMag-mean()-avg
+        column 62: fBodyAccMag-std()-avg
+        column 63: fBodyBodyAccJerkMag-mean()-avg
+        column 64: fBodyBodyAccJerkMag-std()-avg
+        column 65: fBodyBodyGyroMag-mean()-avg
+        column 66: fBodyBodyGyroMag-std()-avg
+        column 67: fBodyBodyGyroJerkMag-mean()-avg
+        column 68: fBodyBodyGyroJerkMag-std()-avg
+
+###Details about data preparation
+
+Raw data was downloaded from the Human Activity Recognition Using Smartphones Dataset: 
+    https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+    
+Testing and training datasets for each type of data (subject_test, X, Y) were combined.  
+
+Variable names were found in file "./UCI HAR Dataset/features.txt" and used to label columns of X data. 
+All X data columns with names that did not contain "mean()" or "std()" were dropped.  
+
+Activity codes were found in file "./UCI HAR Dataset/activity_labels.txt" and used to label Y data.  
+
+Subject data, X data, and Y data were combined for each subject. 
+
+This combined data was grouped by subject and activity code, and a new table with the mean of each column for subject/activity code was made. 
+
+Column names were modified to include '-avg' at the end and tidy file was saved as 'HAR-Smartphone-tidy.txt'.
+
+
+
+
+    
+    
+    
+    
 
