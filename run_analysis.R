@@ -60,8 +60,5 @@ for (n in 3:length(tidyNames)){tidyNames[n] <- paste(sep="", tidyNames[n], "-avg
 colnames(tidy) <- tidyNames
 
 #save text file with tidy data
-<<<<<<< HEAD
 write.table(tidy, "HAR-Smartphone-tidy.txt", row.names = FALSE)
-=======
-write.table(tidy, "HAR-Smartphone-tidy.txt", row.names = FALSE)
->>>>>>> 88af6d6219a51e2c53c9850be16392d183119076
+
