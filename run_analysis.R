@@ -1,7 +1,7 @@
 ## This script cleans up unzipped data downloaded from:
 ## https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 ## Data is originally from "Human Activity Recognition Using Smartphones Dataset"
-
+## Saves text file with tidy data to "HAR-Smartphone-tidy.txt"
 library (dplyr)
 
 # read activity label data
