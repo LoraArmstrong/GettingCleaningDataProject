@@ -1,7 +1,9 @@
 Code Book for HAR-Smartphone-tidy.txt
 =====================================
 
-This is a description of tidy dataset HAR-Smartphone-tidy.txt, which came from the Human Activity Recognition Using Smartphones Dataset and was modified as specified below.   
+This is a description of tidy dataset HAR-Smartphone-tidy.txt, which came from the Human Activity Recognition Using Smartphones Dataset and was modified as specified below.
+
+More information about the raw data can be found here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones  
 
 Tidy dataset dimensions: 180 rows x 68 columns
 
@@ -31,7 +33,7 @@ Description:
                 variable is in the time(t) or frequency (f) domain.  
         * The letters X, Y, and Z in the variable names indicated whether 
                 the measured value is in the X, Y, or Z direction.  
-        Format: 
+        Format: numeric  
         
         column 3: tBodyAcc-mean()-X-avg:   
         column 4: tBodyAcc-mean()-Y-avg   
