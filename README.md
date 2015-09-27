@@ -1,27 +1,14 @@
-<<<<<<< HEAD
----
-title: "README.md"
-author: "Lora Armstrong"
-date: "21 June 2015"
-output: html_document
----
+Getting & Cleaning Data - Course Project
+===================
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Repository for the course project from Johns Hopkins' "Getting & Cleaning Data" Coursera course.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+In addition to this README file, includes:
 
-```{r}
-summary(cars)
-```
+* *run_analysis.R*: R script to tidy up data from the "Human Activity Recognition Using Smartphones Dataset" and save it as text file 'HAR-Smartphone-tidy.txt'
 
-You can also embed plots, for example:
+* *UCI HAR Dataset*: Folder with raw data from the "Human Activity Recognition Using Smartphones Dataset" that is processed by 'run_analysis.R' script.
 
-```{r, echo=FALSE}
-plot(cars)
-```
+* *HAR-Smartphone-tidy.txt*: Text file with tidy data, produced by 'run_analysis.R' script.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-=======
-# Getting-Cleaning-Data-Project
-Project for "Getting and Cleaning Data" Coursera Course
->>>>>>> 88af6d6219a51e2c53c9850be16392d183119076
+* *CodeBook.md*: Code book with information about the tidy data file 'HAR-Smartphone-tidy.txt'.
